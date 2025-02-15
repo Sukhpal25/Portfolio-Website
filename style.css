@@ -1,6 +1,64 @@
 /* GENERAL */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
+/* TYPING ANIMATION */
+.typing-text {
+    position: relative;
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+.typing-text::after {
+    content: "|";
+    position: absolute;
+    right: -8px;
+    color: rgb(85, 85, 85);
+    animation: blink 1s infinite;
+    font-weight: 100;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Animation classes remain the same */
+.slide-in-left {
+    animation: slideInFromLeft 0.75s ease-out forwards;
+}
+
+.slide-in-right {
+    animation: slideInFromRight 0.75s ease-out forwards;
+}
+
+#profile {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    height: 80vh;
+    overflow-x: hidden;
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -8,6 +66,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
+    background-color: #1a0404;
 }
 
 html {
@@ -130,7 +189,7 @@ a:hover {
 /* SECTIONS */
 section {
     padding-top: 4vh;
-    height: 96vh;
+    padding-bottom: 4vh;
     margin: 0 10rem;
     box-sizing: border-box;
     min-height: fit-content;
