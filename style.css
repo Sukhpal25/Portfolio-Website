@@ -50,13 +50,6 @@
     animation: slideInFromRight 0.75s ease-out forwards;
 }
 
-#profile {
-    display: flex;
-    justify-content: center;
-    gap: 5rem;
-    height: 80vh;
-    overflow-x: hidden;
-}
 
 
 * {
@@ -90,6 +83,7 @@ nav {
     justify-content: space-around;
     align-items: center;
     height: 17vh;
+    background-color: #332f2f;
 }
 
 .nav-links {
@@ -203,7 +197,10 @@ section {
     display: flex;
     justify-content: center;
     gap: 5rem;
-    height: 80vh;
+    height: 100vh;
+    overflow-x: hidden;
+    background-image: url(/assets/assets/background.webp);
+    margin: 0;
 }
 
 .section__pic-container {
