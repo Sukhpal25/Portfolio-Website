@@ -83,8 +83,12 @@ nav {
     justify-content: space-around;
     align-items: center;
     height: 17vh;
-    background-color: #332f2f;
+    background-color: transparent;
+    position: absolute;  /* Add this */
+    width: 100%;        /* Add this */
+
 }
+
 
 .nav-links {
     gap: 2rem;
@@ -93,7 +97,7 @@ nav {
 }
 
 a {
-    color: black;
+    color: white;
     text-decoration: none;
     text-decoration-color: white;
 }
@@ -107,6 +111,7 @@ a:hover {
 
 .logo {
     font-size: 2rem;
+    color: white;
 }
 
 .logo:hover {
@@ -199,7 +204,7 @@ section {
     gap: 5rem;
     height: 100vh;
     overflow-x: hidden;
-    background-image: url(/assets/assets/background.webp);
+    background-image: url(/assets/assets/red-waves.webp);
     margin: 0;
 }
 
@@ -418,4 +423,3 @@ footer {
 footer p {
     text-align: center;
 }
-
