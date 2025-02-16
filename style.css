@@ -13,7 +13,7 @@
     content: "|";
     position: absolute;
     right: -8px;
-    color: rgb(85, 85, 85);
+    color: rgb(255, 255, 255);
     animation: blink 1s infinite;
     font-weight: 100;
 }
@@ -59,6 +59,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
+    background: rgb(27, 26, 29);
 }
 
 html {
@@ -66,7 +67,7 @@ html {
 }
 
 p {
-    color: rgb(85, 85, 85);
+    color: rgb(255, 255, 255);
 }
 
 /* TRANSITION */
@@ -140,7 +141,7 @@ a:hover {
 .hamburger-icon span {
     width: 100%;
     height: 2px;
-    background-color: black;
+    background-color: rgb(255, 255, 255);
     transition: all 0.3s ease-in-out;
 }
 
@@ -218,6 +219,7 @@ section {
 .section__text {
     align-self: center;
     text-align: center;
+    color: rgb(199, 199, 199);
 }
 
 .section__text p {
@@ -234,6 +236,7 @@ section {
 }
 
 .title {
+    color: rgb(183, 0, 0);
     font-size: 3rem;
     text-align: center;
 }
@@ -267,7 +270,7 @@ section {
 }
 
 .btn-color-1, .btn-color-2 {
-    border: rgb(53, 53, 53) 0.1rem solid;
+    border: rgb(255, 255, 255) 0.1rem solid;
 }
 
 .btn-color-1:hover, .btn-color-2:hover {
@@ -284,7 +287,7 @@ section {
 }
 
 .btn-color-2 {
-    background: none;
+    background: rgb(183, 183, 183);
 }
 
 .btn-color-2:hover {
@@ -324,10 +327,10 @@ section {
 .details-container {
     padding: 1.5rem;
     flex: 1;
-    background: white;
+    background: rgb(165, 165, 165);
     border-radius: 2rem;
     border: rgb(53, 53, 53) 0.1rem solid;
-    border-color: rgb(163, 163, 163);
+    border-color: rgb(161, 5, 5);
     text-align: center;
 }
 
@@ -379,8 +382,8 @@ article .icon {
 }
 
 .color-container {
-    border-color: rgb(163, 163, 163);
-    background: white;
+    border-color: rgb(142, 7, 7);
+    background: rgb(207, 207, 207);
     border-radius: 2rem;
     padding: 1.5rem;
     text-align: center;
