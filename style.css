@@ -299,6 +299,12 @@ section {
     position: relative;
 }
 
+.glowing-text {
+    font-weight: 600;
+    color: white; /* Base text color */
+    text-shadow: 0 0 2px rgb(255, 255, 255), 0 0 3px rgb(225, 0, 0);
+}
+
 .about-containers {
     gap: 2rem;
     margin-bottom: 2rem;
@@ -316,6 +322,7 @@ section {
 
 .about-pic {
     border-radius: 2rem;
+    box-shadow: 0 0 20px 5px red; /* Adjust blur and spread */
 }
 
 .arrow {
@@ -426,3 +433,4 @@ footer {
 footer p {
     text-align: center;
 }
+
