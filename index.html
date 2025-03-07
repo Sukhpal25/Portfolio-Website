@@ -6,6 +6,8 @@
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="mediaqueries.css">
+    <!-- Adding Three.js for 3D animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
 <body>
     <nav id = "desktop-nav">
@@ -35,23 +37,24 @@
             </div>
         </div>
     </nav>
+    <div id="background-animation"></div>
     <section id = "profile">
         <div class = "section__pic-container">
             <img src="./assets/assets/profile-pic.png" alt="Sukhpal Singh profile picture">
         </div>
         <div class = "section__text">
             <p class = "section__text__p1">Hello I'm</p>
-            <h1 class = "title">Sukhpal Singh</h1>
+            <h1 class = "title animated-title">Sukhpal Singh</h1>
             <p class = "section__text__p2 typing-text"></p>
             <div class = "btn-container">
                 <button 
-                class ="btn btn-color-2" 
+                class ="btn btn-color-2 btn-3d" 
                 onclick="window.open('./assets/assets/resume.pdf')"
                 >
                 Download CV
             </button>
             <button 
-                class ="btn btn-color-1" 
+                class ="btn btn-color-1 btn-3d" 
                 onclick="location.href='./#contact'"
                 >
                 Contact Info
@@ -61,12 +64,12 @@
                 <img 
                 src="./assets/assets/linkedin.png" 
                 alt="My LinkedIn Profile" 
-                class="icon" 
+                class="icon floating-icon" 
                 onclick="location.href='https://www.linkedin.com/in/sukhpal-singh-7043b731b/'">
                 <img 
                 src="./assets/assets/github.png" 
                 alt="My GitHub Profile" 
-                class="icon" 
+                class="icon floating-icon" 
                 onclick="location.href='https://github.com/Sukhpal25'">
             </div>
     </section>
@@ -77,7 +80,7 @@
             <div class = "section__pic-container">
                 <img src="./assets/assets/about-pic.png" 
                 alt="Profile Picture"
-                class="about-pic">
+                class="about-pic hover-rotate">
             </div>
             <div class="about-details-container">
                 <div class="text-container">
@@ -97,7 +100,7 @@
         </div>
         <img src="./assets/assets/arrow.png" 
         alt="Arrow icon" 
-        class="icon arrow" 
+        class="icon arrow bounce-animation" 
         onclick="location.href='./#experience'">
     </section>
     <section id="experience">
@@ -105,7 +108,7 @@
         <h1 class = "title">Experience</h1>
         <div class = "experience-details-container">
             <div class = "about-containers">
-                <div class ="details-container">
+                <div class ="details-container card-3d">
                     <h2 class="experience-sub-title">Frontend Development</h2>
                     <div class = "article-container"></div>
                         <article>
@@ -145,7 +148,7 @@
                         </div>
                     </article>
                 </div>
-                <div class ="details-container">
+                <div class ="details-container card-3d">
                     <h2 class="experience-sub-title">Backend Development</h2>
                     <div class = "article-container"></div>
                         <article>
@@ -199,7 +202,7 @@
         <img 
         src="./assets/assets/arrow.png" 
         alt="Arrow icon" 
-        class="icon arrow" 
+        class="icon arrow bounce-animation" 
         onclick="location.href='./#projects'">
     </section>
     <section id ="projects">
@@ -209,7 +212,7 @@
             <div class="about-containers">
 
 
-            <div class ="details-container color-container">
+            <div class ="details-container color-container project-card-3d">
                 <div class ="article-container">
                     <img src="./assets/assets/project-3.jpg" 
                     alt="Project 3" 
@@ -218,12 +221,12 @@
                 <h2 class="experience-sub-title project-title">NoteCycle</h2>
                 <div class = "btn-container">
                     <button 
-                    class ="btn btn-color-2 project-btn" 
+                    class ="btn btn-color-2 project-btn btn-3d" 
                     onclick="location.href='https://github.com/Sukhpal25/notecycle'">
                         GitHub
                     </button>
                     <button 
-                    class ="btn btn-color-2 project-btn" 
+                    class ="btn btn-color-2 project-btn btn-3d" 
                     onclick="location.href='https://notecycle-sukhpals-projects-6224d46b.vercel.app/'">
                         Try it
                     </button>
@@ -233,7 +236,7 @@
             
 
 
-            <div class ="details-container color-container">
+            <div class ="details-container color-container project-card-3d">
                 <div class ="article-container">
                     <img src="./assets/assets/project-1.png" 
                     alt="Project 1" 
@@ -242,18 +245,18 @@
                 <h2 class="experience-sub-title project-title">MyEmployee App</h2>
                 <div class = "btn-container">
                     <button 
-                    class ="btn btn-color-2 project-btn" 
+                    class ="btn btn-color-2 project-btn btn-3d" 
                     onclick="location.href='https://github.com/Sukhpal25/MyEmployeeApp'">
                         GitHub
                     </button>
                     <button 
-                    class ="btn btn-color-2 project-btn" 
+                    class ="btn btn-color-2 project-btn btn-3d" 
                     onclick="location.href='https://www.youtube.com/watch?v=aBzeGlKdfSE'">
                         Live Demo
                     </button>
                 </div>
             </div>
-            <div class ="details-container color-container">
+            <div class ="details-container color-container project-card-3d">
                 <div class ="article-container">
                     <img src="./assets/assets/project-2.png" 
                     alt="Project 2" 
@@ -262,12 +265,12 @@
                 <h2 class="experience-sub-title project-title">Breast Cancer AI</h2>
                 <div class = "btn-container">
                     <button 
-                    class ="btn btn-color-2 project-btn" 
+                    class ="btn btn-color-2 project-btn btn-3d" 
                     onclick="location.href='https://github.com/Sukhpal25/Breast-Cancer-Predictive-Model'">
                         GitHub
                     </button>
                     <button 
-                    class ="btn btn-color-2 project-btn" 
+                    class ="btn btn-color-2 project-btn btn-3d" 
                     onclick="location.href='https://youtu.be/ybNRW69wV8w'">
                         Live Demo
                     </button>
@@ -278,20 +281,20 @@
         <img 
         src="./assets/assets/arrow.png" 
         alt="Arrow icon" 
-        class="icon arrow" 
+        class="icon arrow bounce-animation" 
         onclick="location.href='./#projects'">
     </section>
     <section id ="contact">
         <p class= "section__text__p1">Get In Touch</p>
         <h1 class="title">Contact Me</h1>
         <div class="contact-info-upper-container">
-            <div class ="contact-info-container">
+            <div class ="contact-info-container contact-card-3d">
                 <img src="./assets/assets/email.png" 
                 alt="email icon" 
                 class="icon contact-icon">
             <p><a href="mailto:sukhpalskang25@gmail.com">SukhpalSKang25@gmail.com</a></p>
             </div>
-            <div class ="contact-info-container">
+            <div class ="contact-info-container contact-card-3d">
                 <img src="./assets/assets/linkedin.png" 
                 alt="LinkedIN icon" 
                 class="icon contact-icon">
@@ -313,6 +316,126 @@
         <p>Copyright &#169; 2024 Sukhpal Singh. All Rights Reserved</p>
     </footer>
     <script src="script.js"></script>
+    <script>
+        // 3D background animation with Three.js
+        document.addEventListener('DOMContentLoaded', function() {
+            const scene = new THREE.Scene();
+            const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+            const renderer = new THREE.WebGLRenderer({ alpha: true });
+            
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            renderer.setClearColor(0x000000, 0);
+            document.getElementById('background-animation').appendChild(renderer.domElement);
+            
+            // Create particles
+            const particlesGeometry = new THREE.BufferGeometry();
+            const particlesCount = 1000;
+            
+            const posArray = new Float32Array(particlesCount * 3);
+            for(let i = 0; i < particlesCount * 3; i++) {
+                posArray[i] = (Math.random() - 0.5) * 5;
+            }
+            
+            particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+            
+            const particlesMaterial = new THREE.PointsMaterial({
+                size: 0.005,
+                color: 0xff5555
+            });
+            
+            const particlesMesh = new THREE.Points(particlesGeometry, particlesMaterial);
+            scene.add(particlesMesh);
+            
+            camera.position.z = 2;
+            
+            // Animation loop
+            function animate() {
+                requestAnimationFrame(animate);
+                particlesMesh.rotation.x += 0.0005;
+                particlesMesh.rotation.y += 0.0005;
+                renderer.render(scene, camera);
+            }
+            
+            animate();
+            
+            // Handle window resize
+            window.addEventListener('resize', () => {
+                camera.aspect = window.innerWidth / window.innerHeight;
+                camera.updateProjectionMatrix();
+                renderer.setSize(window.innerWidth, window.innerHeight);
+            });
+        });
+    </script>
+
+    <style>
+        /* 3D Animation Styles */
+        .rotating-element {
+            animation: rotate3D 15s infinite linear;
+            transform-style: preserve-3d;
+        }
+        
+        .floating-icon {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        .bounce-animation {
+            animation: bounce 2s infinite;
+        }
+        
+        .hover-rotate:hover {
+            animation: rotate3D 5s infinite linear;
+            transform-style: preserve-3d;
+        }
+        
+        .animated-title {
+            animation: textShadow 3s infinite alternate;
+        }
+        
+        .card-3d, .project-card-3d, .contact-card-3d {
+            transition: transform 0.5s;
+            transform-style: preserve-3d;
+        }
+        
+        .card-3d:hover, .project-card-3d:hover, .contact-card-3d:hover {
+            transform: translateZ(20px) rotateX(5deg) rotateY(5deg);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+        }
+        
+        .btn-3d {
+            transition: all 0.3s;
+            transform-style: preserve-3d;
+        }
+        
+        .btn-3d:hover {
+            transform: translateZ(10px) scale(1.05);
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-20px); }
+            60% { transform: translateY(-10px); }
+        }
+        
+        @keyframes textShadow {
+            0% { text-shadow: 0 0 5px rgba(255,0,0,0.5); }
+            100% { text-shadow: 0 0 20px rgba(255,0,0,0.8), 0 0 30px rgba(255,0,0,0.6); }
+        }
+        #background-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+    </style>
 </body>
 </html>
 
