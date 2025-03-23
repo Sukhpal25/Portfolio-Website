@@ -348,39 +348,97 @@ section {
 /* EXPERIENCE */
 #experience {
     position: relative;
+    padding: 4rem 0;
+}
+
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.experience-card {
+    background: rgb(23, 23, 23);
+    border-radius: 20px;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.experience-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.experience-icon {
+    width: 60px;
+    height: 60px;
+    background: rgba(183, 0, 0, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.experience-icon i {
+    font-size: 1.5rem;
+    color: rgb(183, 0, 0);
 }
 
 .experience-sub-title {
-    color: rgb(85, 85, 85);
-    font-weight: 600;
-    font-size: 1.75rem;
-    margin-bottom: 2rem;
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
 }
 
-.experience-details-container {
+.skills-list {
     display: flex;
-    justify-content: center;
     flex-direction: column;
+    gap: 1rem;
 }
 
-.article-container {
+.skill-item {
     display: flex;
-    text-align: initial;
-    flex-wrap: wrap;
-    gap: 2.5rem;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
 }
 
-article {
-    display: flex;
-    width: 10rem;
-    justify-content: space-around;
-    gap: 0.5rem;
+.skill-name {
+    color: white;
+    font-size: 1rem;
 }
 
-article .icon {
-    cursor: default;
+.skill-level {
+    padding: 0.25rem 1rem;
+    border-radius: 100px;
+    font-size: 0.85rem;
+    font-weight: 500;
 }
+
+.skill-level.advanced {
+    background: rgba(183, 0, 0, 0.2);
+    color: rgb(255, 0, 0);
+}
+
+.skill-level.intermediate {
+    background: rgba(183, 0, 0, 0.1);
+    color: rgb(255, 0, 0);
+}
+
+.skill-level.beginner {
+    background: rgba(183, 0, 0, 0.05);
+    color: rgb(255, 0, 0);
+}
+
+@media screen and (max-width: 768px) {
+    .experience-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Add Font Awesome for icons */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
 
 /* PROJECTS */
 #projects {
